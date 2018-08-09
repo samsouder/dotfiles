@@ -41,4 +41,4 @@ install-linuxbrew:
 
 install-brews:
 	@echo "Installing common Homebrew packages"
-	brew install ag mycli neovim
+	brew install ag mycli neovim bash-completion bash-git-prompt
