@@ -29,31 +29,11 @@ install-configs:
 install-linuxbrew:
 	@echo "Installing linuxbrew"
 	sudo apt-get install -y build-essential curl file git
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.profile
-	echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >> ~/.profile
-	echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >> ~/.profile
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+	echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$$PATH"' >> ~/.profile
+	echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$$MANPATH"' >> ~/.profile
+	echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$$INFOPATH"' >> ~/.profile
 
 install-brews:
 	@echo "Installing common Homebrew packages"
 	brew install ag mycli neovim
-
-# push-tick:
-# 	@echo "Pushing TICK configuration"
-# 	rsync $(RSYNC_PARAMS) --exclude-from=tick/.rsyncignore tick/ $(REMOTE_SERVER):$(HOME_PATH)/tick/
-
-# pull-tick:
-# 	@echo "Pulling TICK configuration updates from server"
-# 	rsync $(RSYNC_PARAMS) --exclude-from=tick/.rsyncignore $(REMOTE_SERVER):$(HOME_PATH)/tick/ tick/
-
-# sync-tick: pull-tick push-tick
-
-# push-unifi:
-# 	@echo "Pushing Unifi configuration"
-# 	rsync $(RSYNC_PARAMS) unifi/ $(REMOTE_SERVER):$(HOME_PATH)/unifi/
-
-# pull-unifi:
-# 	@echo "Pulling Unifi configuration"
-# 	rsync $(RSYNC_PARAMS) --exclude-from=unifi/.rsyncignore $(REMOTE_SERVER):$(HOME_PATH)/unifi/ unifi/
-
-# sync-unifi: pull-unifi push-unifi
