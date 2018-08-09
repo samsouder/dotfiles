@@ -15,6 +15,8 @@ install: install-linuxbrew install-configs install-brews
 
 install-configs:
 	@echo "Installing dot files..."
+	# Bash
+	cp bash_profile $(HOME_PATH)/.bash_profile
 	# Tmux config and plugins
 	cp tmux.conf $(HOME_PATH)/.tmux.conf
 	mkdir -p $(HOME_PATH)/.tmux/plugins
@@ -36,9 +38,6 @@ install-linuxbrew:
 	@echo "Installing linuxbrew"
 	sudo apt-get install -y build-essential curl file git
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$$PATH"' >> ~/.profile
-	echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$$MANPATH"' >> ~/.profile
-	echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$$INFOPATH"' >> ~/.profile
 
 install-brews:
 	@echo "Installing common Homebrew packages"
