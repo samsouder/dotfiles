@@ -5,10 +5,10 @@ all:
 
 clean:
 	@echo "Cleaning up existing configuration and software"
-	rm -r /home/linuxbrew/
-	rm -r $(HOME_PATH)/.tmux*
-	rm -r $(HOME_PATH)/.aws
-	rm -r $(HOME_PATH)/.config/nvim
+	rm -rf /home/linuxbrew/
+	rm -rf $(HOME_PATH)/.tmux*
+	rm -rf $(HOME_PATH)/.aws
+	rm -rf $(HOME_PATH)/.config/nvim
 
 install: install-linuxbrew install-configs install-brews
 
