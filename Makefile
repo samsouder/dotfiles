@@ -9,6 +9,7 @@ clean:
 	rm -rf $(HOME_PATH)/.tmux*
 	rm -rf $(HOME_PATH)/.aws
 	rm -rf $(HOME_PATH)/.config/nvim
+	rm -rf $(HOME_PATH)/.local/share/nvim/site/autoload/plug.vim
 
 install: install-linuxbrew install-configs install-brews
 
@@ -25,6 +26,11 @@ install-configs:
 	# Neovim
 	mkdir -p $(HOME_PATH)/.config/nvim
 	cp nvim/init.vim $(HOME_PATH)/.config/nvim
+	# Neovim vim-plug
+	curl -fLo $(HOME_PATH)/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	mkdir -p $(HOME_PATH)/.local/share/nvim/backup
+	mkdir -p $(HOME_PATH)/.local/share/nvim/swap
+	mkdir -p $(HOME_PATH)/.local/share/nvim/undo
 
 install-linuxbrew:
 	@echo "Installing linuxbrew"

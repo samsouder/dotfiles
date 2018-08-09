@@ -91,8 +91,8 @@ set clipboard=unnamed
 set wildignore+=*.o,*.obj,*.pyc,*.so,*.swp,*.zip,*.jpg,*.gif,*.png,*.pdf
 set wildignore+=.git,.hg,.svn,DS_STORE,bower_components,node_modules
 
-colorscheme wombat256
-let g:airline_theme='wombat'
+colorscheme Tomorrow-Night
+let g:airline_theme='angr'
 
 " Map leader (the dedicated user-mapping prefix key) to comma
 "let mapleader = ","
