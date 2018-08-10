@@ -36,3 +36,8 @@ if [ -f "/home/linuxbrew/.linuxbrew/opt/bash-git-prompt/share/gitprompt.sh" ]; t
     __GIT_PROMPT_DIR="/home/linuxbrew/.linuxbrew/opt/bash-git-prompt/share"
     source "/home/linuxbrew/.linuxbrew/opt/bash-git-prompt/share/gitprompt.sh"
 fi
+
+alias ll='ls -alh'
+
+alias vnc-tunnel-salinized='ssh -L 5901:localhost:5901 -N -f ssouder@web0.salinized.com'
+
