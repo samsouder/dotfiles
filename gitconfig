@@ -1,0 +1,30 @@
+[user]
+	name = Sam Souder
+	email = samsouder@gmail.com
+[github]
+    user = samsouder
+[alias]
+    ci = commit
+    st = status
+    di = diff
+    co = checkout
+    br = branch
+    pu = pull
+    sta = stash
+    sub = submodule
+    pr = pull --rebase
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[color]
+    ui = auto
+    branch = auto
+    status = auto
+[core]
+    editor = nvim
+[pull]
+    rebase = true
+[push]
+    default = current
+[rebase]
+    autoSquash = true
+    autoStash = true
+
