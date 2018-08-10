@@ -17,6 +17,8 @@ install-configs:
 	@echo "Installing dot files..."
 	# Bash
 	cp bash_profile $(HOME_PATH)/.bash_profile
+	# Git
+	cp gitconfig $(HOME_PATH)/.gitconfig
 	# Tmux config and plugins
 	cp tmux.conf $(HOME_PATH)/.tmux.conf
 	mkdir -p $(HOME_PATH)/.tmux/plugins
